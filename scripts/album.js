@@ -30,6 +30,22 @@ var albumMacroni = {
     ]
 };
 
+//My Example Album
+var albumKaraoke = {
+    title: 'Karaoke Favorites',
+    artist: 'Various',
+    label: 'Random Karaoke Bar',
+    year: '2017',
+    albumArtUrl: 'assets/images/album_covers/06.png',
+    songs: [
+        { title: 'Girls Just Wanna Have Fun', duration: '4:00' },
+        { title: 'Wannabe', duration: '5:01' },
+        { title: 'Ironic', duration: '4:27' },
+        { title: 'Total Eclipse of the Heart', duration: '5:23' },
+        { title: 'No Scrubs', duration: '4:15' }
+    ]
+};
+
 var createSongRow = function(songNumber, songName, songLength) {
     var template =
         '<tr class="album-view-song-item">'
@@ -67,4 +83,11 @@ var setCurrentAlbum = function(album) {
 
 window.onload = function() {
     setCurrentAlbum(albumPicasso);
+};
+
+albumImage.addEventListener('click', function() {
+    
+    for (var i = 0; i < albulm.albumArtUrl[3]; i++){
+        return albumImage.setAttribute('src', albulm.albumArtUrl);
+    }  
 };

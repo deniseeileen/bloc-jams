@@ -1,4 +1,5 @@
-var collectionItemTemplate =
+var buildCollectionItemTemplate = function() {
+    var template = 
     '<div class="collection-album-container column fourth">'
    + '   <img src="assets/images/album_covers/01.png"/>'
    + '   <div class="collection-album-info caption">'
@@ -13,15 +14,17 @@ var collectionItemTemplate =
    + '   </div>'
    + '</div>'
 ;
+    return $(template);
+};
 
-window.onload = function() {
-    // #1 we select first and only element and assign it to variable
-    var collectionContainer = document.getElementsByClassName('album-covers') [0];
-    // #2 we assign an empty string to clear its content. ensures working w/clean slate
-    collectionContainer.innerHTML = '';
+$(window).load(function() {
+
+    var $collectionContainer = $('.album-covers');
+   
+    $collectionContainer.empty();
     
-    // #3 each loop adds the contents of template. the += operator appends content to strings
     for (var i = 0; i <12; i++) {
-        collectionContainer.innerHTML += collectionItemTemplate;
+        var $newThumbnail = buildCollectionItemTemplate();
+        $collectionContainer.append($newThumbnail);
     }
-}
+});

@@ -60,7 +60,7 @@
     font-size: 0.75rem;
     margin: 0;
     position: absolute;
-    width: 100%
+    width: 100%;
     font-weight: 300;
 }
 
@@ -98,7 +98,7 @@
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 2px;
     position: relative;
-    cursor: pointer;  
+    cursor: pointer;
 }
 
 .seek-bar .fill {
@@ -115,7 +115,7 @@
     background-color: white;
     left: 36%;
     top: 50%;
-    
+
     /*#1*/
     margin-left: -0.25rem;
     margin-top: -0.25rem;
@@ -126,7 +126,7 @@
             transition: all 100ms ease-in-out;
 }
 
-.seek-bar: hover .thumb {
+.seek-bar:hover .thumb {
     width: 1.1rem;
     height: 1.1rem;
     margin-top: -0.5rem;
@@ -155,7 +155,7 @@
         padding: 1rem;
         background-color: rgba(0,0,0,0.6);
     }
-    
+
     .player-bar .main-controls,
     .player-bar .currently-playing,
     .player-bar .volume {
@@ -165,22 +165,22 @@
         width: 100%;
         text-align: center;
     }
-    
+
     .player-bar .main-controls,
     .player-bar .volume {
         min-height: 3.5rem;
     }
-    
+
     .player-bar .currently-playing {
         min-height: 2.5rem;
     }
-    
+
     .player-bar .artist-name,
     .player-bar .song-name {
         display: none;
     }
-    
+
     .player-bar .currently-playing .artist-song-mobile {
-        display: block; 
+        display: block;
     }
 }

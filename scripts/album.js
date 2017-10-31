@@ -132,6 +132,30 @@ var setCurrentAlbum = function(album) {
     }
 };
 
+/*
+var filterTimeCode = function(timeInSeconds) {
+    // 1)get seconds using parseFloat()
+    // 2)store variables using Math.floor()
+    // 3) return time in X:XX format
+    
+    return 
+};
+
+var setTotalTimeInPlayerBar = function(totalTime) {
+    //set text of .total-time to length of song
+    //steps = 1)grab .current-time element 2) assign text...how to link with song length?
+    
+    var totalTime =
+};
+
+var setCurrentTimeInPlayerBar = function(currentTime) {
+    //set text of .current-time to current time in song
+    //steps = 1) grab .current-time element 2) assign text...how to link with current time?
+    
+    var currentTime = 
+};
+*/
+
 var updateSeekBarWhileSongPlays = function() {
     if (currentSoundFile) {
         //custom Buzz event
@@ -140,6 +164,7 @@ var updateSeekBarWhileSongPlays = function() {
             var $seekBar = $('.seek-control .seek-bar');
             
             updateSeekPercentage($seekBar, seekBarFillRatio);
+            //setCurrentTimeInPlayerBar();
         });
     }
 };
@@ -155,6 +180,7 @@ var updateSeekPercentage = function($seekBar, seekBarFillRatio) {
     var percentageString = offsetXPercent + '%';
     $seekBar.find('.fill').width(percentageString);
     $seekBar.find('.thumb').css({left: percentageString});
+
 };
 
 var setupSeekBars = function() {
@@ -279,6 +305,8 @@ var updatePlayerBarSong = function() {
     $('.currently-playing .artist-song-mobile').text(currentSongFromAlbum.title + " - " + currentAlbum.artist);
 
     $('.main-controls .play-pause').html(playerBarPauseButton);
+    
+    //setTotalTimeInPlayerBar();
 };
 
 var togglePlayFromPlayerBar = function() {
